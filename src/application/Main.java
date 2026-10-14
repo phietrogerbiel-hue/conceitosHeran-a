@@ -13,5 +13,9 @@ public class Main {
         Account acc2 = new SavingsAccount(1002, "ana", 1000.0, 0.01);
         acc2.withdraw(200.0);
         System.out.println(acc2.getBalance());
+
+        Account acc3 = new BusinessAcount(1003, "bob", 1000.0, 500.0);
+        acc3.withdraw(200.0);
+        System.out.println(acc3.getBalance());
     }
 }
