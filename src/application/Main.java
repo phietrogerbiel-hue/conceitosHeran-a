@@ -10,6 +10,8 @@ public class Main {
         acc.withdraw(200);
         System.out.println(acc.getBalance());
 
-
+        Account acc2 = new SavingsAccount(1002, "ana", 1000.0, 0.01);
+        acc2.withdraw(200.0);
+        System.out.println(acc2.getBalance());
     }
 }
