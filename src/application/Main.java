@@ -1,18 +1,23 @@
 package application;
 
+import entities.Account;
 import entities.BusinessAcount;
+import entities.SavingsAccount;
 
 public class Main {
-    static void main(String[] args) {
+    public static void main(String[] args) {
+        Account acc = new Account(1001, "Thrwo", 0.0);
+        BusinessAcount bacc = new BusinessAcount(1002, "Mdr", 0.0,500.0);
 
-        BusinessAcount acount = new BusinessAcount(1212, "Phietro", 0.0, 500.0);
 
-        System.out.println("Saldo inicial: " + acount.getBalance());
+        //UPCASTING
 
-        acount.deposit(100);
-        System.out.println("Saldo pós depósito: " + acount.getBalance());
+        Account acc1 = bacc;
+        Account acc2 = new BusinessAcount(1002, "Bob", 0.0, 200.0);
+        Account acc3 = new SavingsAccount(1004,"ana",0.0,0.01);
 
-        acount.loan(200);
-        System.out.println("Saldo pós empréstimo: " + acount.getBalance());
+
+
+
     }
 }
